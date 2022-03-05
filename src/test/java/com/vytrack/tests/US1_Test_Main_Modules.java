@@ -26,7 +26,7 @@ public class US1_Test_Main_Modules extends TestBase {
         }
 
       //  moduleElements.forEach(w->actualmoduleTexts.add(w.getText()));
-        System.out.println("actualmoduleTexts = " + actualmoduleTexts);
+      //  System.out.println("actualmoduleTexts = " + actualmoduleTexts);
         List<String> expectedmoduleTexts=new ArrayList<>(Arrays.asList(
                 "Dashboards",
                 "Fleet",
