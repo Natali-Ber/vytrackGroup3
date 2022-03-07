@@ -1,4 +1,4 @@
-package com.vytrack.tests.base;
+package com.vytrack.tests;
 
 public class US13_Vehicle_Costs_Pages {
     //Start
