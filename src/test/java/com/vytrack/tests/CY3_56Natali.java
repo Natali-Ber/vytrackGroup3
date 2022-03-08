@@ -78,7 +78,7 @@ public class CY3_56Natali extends TestBase {
 
         Assert.assertEquals(actualURL, expectedURL, "URL aren't match");
 
-//commit
+//
 
 
     }
