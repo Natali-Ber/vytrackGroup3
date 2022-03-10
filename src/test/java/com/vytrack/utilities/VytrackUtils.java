@@ -1,6 +1,8 @@
 package com.vytrack.utilities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class VytrackUtils {
 
@@ -19,7 +21,7 @@ public class VytrackUtils {
 
     public static void loginAsDriver() {
         //go to website
-        Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env2"));
         // pass username
         // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
         Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(ConfigurationReader.getProperty("driver_username"));
