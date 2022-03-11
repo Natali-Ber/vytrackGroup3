@@ -15,33 +15,39 @@ public class CY3_56Natali extends TestBase {
     @Test(priority = 1)
     public void CY3_56_1TruckDriver() throws InterruptedException {
 
-
-        WebElement username = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput']"));
+        //1. User locate TruckDriver Username and Password
+        WebElement username = Driver.getDriver().findElement(By.id("prependedInput"));
         username.sendKeys("user14");
 
-        WebElement password = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput2']"));
-        Thread.sleep(2000);
+        WebElement password = Driver.getDriver().findElement(By.id("prependedInput2"));
+
         password.sendKeys("UserUser123");
 
-
-        WebElement loginclick = Driver.getDriver().findElement(By.xpath("//button[@id='_submit']"));
+        //2.User  click LOG IN button
+        WebElement loginclick = Driver.getDriver().findElement(By.id("_submit"));
         loginclick.click();
 
 
+        //3.locating  User click question icon on the right top of the homepage
         WebElement questionIcon=Driver.getDriver().findElement(By.xpath("//i[@class='fa-question-circle']"));
         Thread.sleep(2000);
         questionIcon.click();
 
-        ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+        //4.create Array list for window Hendles
+       ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
-        Driver.getDriver().switchTo().window(allWindowHandles.get(1));
+        //5.switch driver for my second page
+                Driver.getDriver().switchTo().window(allWindowHandles.get(1));
 
 
+        //6. Getting URL for second window
         String actualURL = Driver.getDriver().getCurrentUrl();
         System.out.println("actualURL = " + actualURL);
 
         String expectedURL = "https://doc.oroinc.com/";
 
+
+        //7. Confirm actual URL and expected URL
         Assert.assertEquals(actualURL, expectedURL, "URL aren't match");
 
 
@@ -52,7 +58,8 @@ public class CY3_56Natali extends TestBase {
     @Test  (priority = 2)
     public void CY3_56_1StoreManager() throws InterruptedException {
 
-
+        //1. User locate StoreManager Username and Password
+        // NEXT 6 STEPS SAME as first test
         WebElement username = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput']"));
         username.sendKeys("storemanager61");
         WebElement password = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput2']"));
@@ -66,7 +73,7 @@ public class CY3_56Natali extends TestBase {
         Thread.sleep(2000);
         questionIcon.click();
 
-        ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+        ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
         Driver.getDriver().switchTo().window(allWindowHandles.get(1));
 
@@ -78,22 +85,22 @@ public class CY3_56Natali extends TestBase {
 
         Assert.assertEquals(actualURL, expectedURL, "URL aren't match");
 
-//
 
 
     }
     @Test(priority = 3)
     public void CY3_56_1SalesManager() throws InterruptedException {
 
-
-        WebElement username = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput']"));
+        //1. User locate SalesManager Username and Password
+        // NEXT 6 STEPS SAME
+        WebElement username = Driver.getDriver().findElement(By.id("prependedInput"));
         username.sendKeys("salesmanager121 ");
 
-        WebElement password = Driver.getDriver().findElement(By.xpath("//input[@id='prependedInput2']"));
+        WebElement password = Driver.getDriver().findElement(By.id("prependedInput2"));
         password.sendKeys("UserUser123");
 
 
-        WebElement loginclick = Driver.getDriver().findElement(By.xpath("//button[@id='_submit']"));
+        WebElement loginclick = Driver.getDriver().findElement(By.id("_submit"));
         loginclick.click();
 
 
@@ -101,7 +108,7 @@ public class CY3_56Natali extends TestBase {
         Thread.sleep(2000);
         questionIcon.click();
 
-        ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+        ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
         Driver.getDriver().switchTo().window(allWindowHandles.get(1));
 
