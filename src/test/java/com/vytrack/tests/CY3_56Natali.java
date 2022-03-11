@@ -20,7 +20,7 @@ public class CY3_56Natali extends TestBase {
         username.sendKeys("user14");
 
         WebElement password = Driver.getDriver().findElement(By.id("prependedInput2"));
-        Thread.sleep(2000);
+
         password.sendKeys("UserUser123");
 
         //2.User  click LOG IN button
@@ -34,7 +34,7 @@ public class CY3_56Natali extends TestBase {
         questionIcon.click();
 
         //4.create Array list for window Hendles
-       ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+       ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
         //5.switch driver for my second page
                 Driver.getDriver().switchTo().window(allWindowHandles.get(1));
@@ -73,7 +73,7 @@ public class CY3_56Natali extends TestBase {
         Thread.sleep(2000);
         questionIcon.click();
 
-        ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+        ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
         Driver.getDriver().switchTo().window(allWindowHandles.get(1));
 
@@ -108,7 +108,7 @@ public class CY3_56Natali extends TestBase {
         Thread.sleep(2000);
         questionIcon.click();
 
-        ArrayList<String> allWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
+        ArrayList<String> allWindowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
 
         Driver.getDriver().switchTo().window(allWindowHandles.get(1));
 
