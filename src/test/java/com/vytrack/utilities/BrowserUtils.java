@@ -5,6 +5,8 @@ In this class only general utility methods that are not related to some specific
  */
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.util.Set;
@@ -59,4 +61,7 @@ public class BrowserUtils {
     public static void verifyTitle(WebDriver driver ,String expectedTitle){
         Assert.assertEquals(driver.getTitle(), expectedTitle);
     }
+
+
+
 }
