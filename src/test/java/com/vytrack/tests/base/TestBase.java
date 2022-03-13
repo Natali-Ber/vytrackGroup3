@@ -9,8 +9,10 @@ import org.testng.annotations.Test;
 public abstract class TestBase {
     @BeforeMethod
     public void setUp() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
+       // Driver.getDriver().get(ConfigurationReader.getProperty());
     }
+
+
 
     @AfterMethod
     public void tearDown() {
