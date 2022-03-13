@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class US13_Vehicle_Costs_Pages_Filter extends TestBase {
 
     @Test
-    public void asDriver(){
+    public void asDriver(){//This test will be failing, unless bug would be fixed.
 
         VytrackUtils.loginAsDriver();
 
