@@ -2,6 +2,7 @@ package com.vytrack.tests.base;
 
 import com.vytrack.pages.DashboardPage;
 import com.vytrack.pages.VytrackLoginPage;
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,5 +23,4 @@ public abstract class TestBase {
     public void tearDown() {
         Driver.closeDriver();//called method from 'Driver' Utils
     }
-
 }
