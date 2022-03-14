@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static com.vytrack.utilities.VytrackUtils.*;
 
-public class MehmetUserStory {
+public class US8_Mehmet_Version2 {
 
 
     @Test(priority = 1)
