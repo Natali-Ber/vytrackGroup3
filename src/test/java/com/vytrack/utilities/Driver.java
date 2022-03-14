@@ -13,6 +13,7 @@ public class Driver {
     Creating a private constructor, so we are closing
     access to the object of this class from outside the class
      */
+
     private Driver() {
     }
 
@@ -65,6 +66,8 @@ public class Driver {
         if (driver != null) {
             driver.quit();
             driver = null;
+
+
         }
     }
 }

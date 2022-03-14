@@ -9,6 +9,7 @@ public class DynamicLoad7Page {
 
     //1.create constructor and instantiate driver and object of class
 
+
     public DynamicLoad7Page(){
         //initElement will create connection between the current driver session(instance)
         //and the object of current class
