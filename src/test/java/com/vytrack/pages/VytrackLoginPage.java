@@ -42,7 +42,7 @@ public class VytrackLoginPage {
         BrowserUtils.sleep(2);
         inputPassword.sendKeys(password);
         BrowserUtils.sleep(2);
-        loadingLabel.click();
+        loginButton.click();
 
     }
 
