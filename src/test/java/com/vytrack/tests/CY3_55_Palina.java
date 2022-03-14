@@ -1,6 +1,8 @@
 package com.vytrack.tests;
 
+import com.vytrack.pages.VyTrackLoginPage;
 import com.vytrack.tests.base.TestBase;
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VytrackUtils;
 import org.openqa.selenium.By;
@@ -14,7 +16,7 @@ import java.util.List;
 
 public class CY3_55_Palina extends TestBase {
 
-    @Test(priority = 1)
+   /* @Test(priority = 1)
     public void login_as_store_manager() {
 
 
@@ -65,6 +67,89 @@ public class CY3_55_Palina extends TestBase {
 
 
         VytrackUtils.loginAsDriver();
+        List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
+
+        List<String> actualNames = new ArrayList<>();
+        for (WebElement each : moduleNames) {
+
+            actualNames.addAll(Arrays.asList(each.getText()));
+        }
+
+        List<String> expectedNames = new ArrayList<>(Arrays.asList("Fleet", "Customers", "Activities", "System"));
+
+        Assert.assertEquals(actualNames, expectedNames);
+
+    }
+
+*/
+
+
+
+    @Test(priority = 1)
+    public void login_as_store_manager() {
+
+
+        //Story1:  As a user, I should be accessing all the main modules of the app.
+        //AC #1: store and sales managers should view 8 module names.
+        //Expected module names: Dashboards, Fleet, Customers, Sales, Activities, Marketing, Reports & Segments, System
+
+        // login as store manager
+
+
+        loginPage=new VyTrackLoginPage();
+
+        loginPage.login(ConfigurationReader.getProperty("store_manager_username"),
+                ConfigurationReader.getProperty("store_manager_password"));
+
+
+        List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
+
+        List<String> actualNames = new ArrayList<>();
+        for (WebElement each : moduleNames) {
+
+            actualNames.addAll(Arrays.asList(each.getText()));
+        }
+
+        List<String> expectedNames = new ArrayList<>(Arrays.asList("Dashboards", "Fleet", "Customers", "Sales", "Activities", "Marketing", "Reports & Segments", "System"));
+
+        Assert.assertEquals(actualNames, expectedNames);
+    }
+
+    @Test(priority = 2)
+    public void login_as_sales_manager() {
+
+
+        // Login as sales manager
+
+        loginPage=new VyTrackLoginPage();
+
+        loginPage.login(ConfigurationReader.getProperty("sales_manager_username"), ConfigurationReader.getProperty("sales_manager_password"));
+
+
+        List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
+
+        List<String> actualNames = new ArrayList<>();
+        for (WebElement each : moduleNames) {
+
+            actualNames.addAll(Arrays.asList(each.getText()));
+        }
+
+        List<String> expectedNames = new ArrayList<>(Arrays.asList("Dashboards", "Fleet", "Customers", "Sales", "Activities", "Marketing", "Reports & Segments", "System"));
+
+        Assert.assertEquals(actualNames, expectedNames);
+
+    }
+
+
+    @Test(priority = 3)
+    public void login_as_driver() {
+        //AC #2: drivers should view 4 module names
+        //    //Expected module names: Fleet, Customers, Activities, System
+
+        // Login as a driver
+        loginPage=new VyTrackLoginPage();
+        loginPage.login(ConfigurationReader.getProperty("driver_username"),ConfigurationReader.getProperty("driver_password"));
+
         List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
 
         List<String> actualNames = new ArrayList<>();
