@@ -66,6 +66,7 @@ public class CY3_55_Palina extends TestBase {
     public void login_as_driver() {
 
 
+
         VytrackUtils.loginAsDriver();
         List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
 
