@@ -79,6 +79,8 @@ public class CY3_55_Palina extends TestBase {
 
         Assert.assertEquals(actualNames, expectedNames);
 
+
+
     }
 
 
