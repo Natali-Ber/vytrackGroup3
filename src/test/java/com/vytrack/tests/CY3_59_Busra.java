@@ -54,6 +54,7 @@ public class CY3_59_Busra extends TestBase {
         VytrackUtils.loginAsStoreManger();
 
         // go to Fleet tab
+        //
         WebElement fleetTableElement = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Fleet' and contains(@class, 'title title-level-1')]"));
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(fleetTableElement).perform();
