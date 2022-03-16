@@ -1,16 +1,20 @@
 package com.vytrack.tests;
 
+import com.vytrack.tests.base.TestBase;
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class CY3_60_Kevin {
+public class CY3_60_Kevin extends TestBase {
 
     // As a user, I want to view edit car info icons from the Vehicle page
 
+
     @Test
-    public void testCase60(){
+    public void testCase60() throws InterruptedException {
 
         // 1. Takes user to vyTrack website
         Driver.getDriver().get("https://qa1.vytrack.com/user/login");
@@ -27,7 +31,30 @@ public class CY3_60_Kevin {
         WebElement logInButton = Driver.getDriver().findElement(By.xpath("//*[@id='_submit']"));
         logInButton.click();
 
+        // 5. Hovers over the Fleet option
+        WebElement hoverMouse = Driver.getDriver().findElement(By.xpath("(//li[@class='dropdown dropdown-level-1'])[1]"));
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(hoverMouse);
 
+        Thread.sleep(4000);
+
+        //6. Presses on Vehicle option
+        WebElement vehicle = Driver.getDriver().findElement(By.xpath("(//span[@class='title title-level-2'])[3]"));
+        actions.moveToElement(vehicle);
+        actions.click().build().perform();
+
+        Thread.sleep(5000);
+
+        //7. Hovers over hamburger icon and displays icons
+
+
+
+
+
+
+
+
+       // (//span[@class='title title-level-2'])[3]
 
     }
 
