@@ -54,9 +54,9 @@ public class CY3_60_Kevin extends TestBase {
         WebElement threeIconPopUp = Driver.getDriver().findElement(By.xpath("(//a[@title='Edit'])[1]"));
 
         if(threeIconPopUp.isDisplayed()){
-            System.out.println("Passed Icon is displayed!!!!");
+            System.out.println("Passed, Icon is displayed!!!!");
         }else{
-            System.out.println("Failed Icon is not Displayed");
+            System.out.println("Failed, Icon is not Displayed");
         }
 
 
