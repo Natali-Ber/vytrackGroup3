@@ -36,8 +36,13 @@ public class CY3_55_Palina extends TestBase {
 
         List<String> expectedNames = new ArrayList<>(Arrays.asList("Dashboards", "Fleet", "Customers", "Sales", "Activities", "Marketing", "Reports & Segments", "System"));
 
+
+
+       Assert.assertEquals(actualNames, expectedNames);
+
         BrowserUtils.sleep(2);
         Assert.assertEquals(actualNames, expectedNames);
+
     }
 
     @Test(priority = 2)
