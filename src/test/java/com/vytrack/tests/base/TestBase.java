@@ -12,7 +12,7 @@ public abstract class TestBase {
     public DashboardPage dashboardPage;
     @BeforeMethod
     public void setUp() {
- Natali3
+
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
 
         // Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
@@ -20,7 +20,7 @@ public abstract class TestBase {
         System.out.println("Test is started");
         loginPage = new VytrackLoginPage();
         dashboardPage = new DashboardPage();
-master
+
     }
 
     @AfterMethod
