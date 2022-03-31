@@ -23,6 +23,7 @@ public class CY3_61_Rabia extends TestBase {
 
     WebElement fleetTabElement = Driver.getDriver().findElement(By.xpath(fleetTabElementLocator));
     Actions actions = new Actions(Driver.getDriver());
+    VytrackUtils.waitTillLoaderMaskDisappear();
     actions.moveToElement(fleetTabElement).perform();
     String vehiclesElementLocator = "//span[normalize-space()='Vehicles' and contains(@class, 'title title-level-2')]";
 

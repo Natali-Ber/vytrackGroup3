@@ -1,6 +1,9 @@
 package com.vytrack.tests;
 
+
 import com.vytrack.tests.base.TestBase;
+import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VytrackUtils;
 import org.openqa.selenium.By;
@@ -33,7 +36,13 @@ public class CY3_55_Palina extends TestBase {
 
         List<String> expectedNames = new ArrayList<>(Arrays.asList("Dashboards", "Fleet", "Customers", "Sales", "Activities", "Marketing", "Reports & Segments", "System"));
 
+
+
+       Assert.assertEquals(actualNames, expectedNames);
+
+        BrowserUtils.sleep(2);
         Assert.assertEquals(actualNames, expectedNames);
+
     }
 
     @Test(priority = 2)
@@ -51,6 +60,7 @@ public class CY3_55_Palina extends TestBase {
         }
 
         List<String> expectedNames = new ArrayList<>(Arrays.asList("Dashboards", "Fleet", "Customers", "Sales", "Activities", "Marketing", "Reports & Segments", "System"));
+        BrowserUtils.sleep(2);
 
         Assert.assertEquals(actualNames, expectedNames);
 
@@ -64,6 +74,7 @@ public class CY3_55_Palina extends TestBase {
     public void login_as_driver() {
 
 
+
         VytrackUtils.loginAsDriver();
         List<WebElement> moduleNames = Driver.getDriver().findElements(By.xpath("//span[@class='title title-level-1']"));
 
@@ -75,9 +86,16 @@ public class CY3_55_Palina extends TestBase {
 
         List<String> expectedNames = new ArrayList<>(Arrays.asList("Fleet", "Customers", "Activities", "System"));
 
+        BrowserUtils.sleep(2);
         Assert.assertEquals(actualNames, expectedNames);
 
+
     }
+
+
+
+
+
 
 
 

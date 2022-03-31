@@ -12,11 +12,14 @@ public abstract class TestBase {
     public DashboardPage dashboardPage;
     @BeforeMethod
     public void setUp() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
+
         //called method from 'Driver' Utils and config.prop
         System.out.println("Test is started");
         loginPage = new VytrackLoginPage();
         dashboardPage = new DashboardPage();
+
     }
 
     @AfterMethod
