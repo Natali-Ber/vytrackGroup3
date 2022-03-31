@@ -15,7 +15,6 @@ public abstract class TestBase {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
 
-        // Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
         //called method from 'Driver' Utils and config.prop
         System.out.println("Test is started");
         loginPage = new VytrackLoginPage();
